@@ -2,6 +2,7 @@ call plug#begin()
 
 Plug 'scrooloose/nerdtree'
 Plug 'rhysd/vim-clang-format'
+
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'rakr/vim-one'
@@ -11,6 +12,9 @@ Plug 'easymotion/vim-easymotion'
 Plug 'w0rp/ale'
 Plug 'rhysd/vim-clang-format'
 Plug 'mklabs/split-term.vim'
+Plug 'bling/vim-airline'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tibabit/vim-templates'
 
 call plug#end()
 
@@ -52,3 +56,14 @@ nnoremap <C-j> <Esc>:ClangFormat<CR>
 
 noremap <C-b> :4Term ./build.sh <CR>
 noremap <C-t> :20Term <CR>
+
+" header / source
+nnoremap <F4> :A<CR>
+inoremap <F4> <ESC>:A<CR>a
+
+" file under cursor
+nnoremap <F2> :IH<CR>
+inoremap <F2> <ESC>:IH<CR>
+
+noremap <C-q> :qa<CR>
+map <C-S> :write<CR>
